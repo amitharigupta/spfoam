@@ -1,78 +1,136 @@
-import { Mail, Phone, MapPin, Instagram, Twitter, Facebook, Youtube } from "lucide-react";
-import { useState } from "react";
+'use client';
 
-const Footer = () => {
-  const [email, setEmail] = useState("");
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      setEmail('');
+    }
+  };
 
   return (
-    <footer className="relative bg-foreground text-primary-foreground overflow-hidden">
-      {/* Wave */}
-      <div className="absolute top-0 left-0 right-0 h-16 overflow-hidden">
-        <svg viewBox="0 0 1440 60" className="w-full h-full" preserveAspectRatio="none">
-          <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,0 L0,0 Z" fill="hsl(var(--background))" />
-        </svg>
-      </div>
-
-      <div className="container mx-auto px-4 lg:px-8 pt-28 pb-12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="space-y-4">
-            <h3 className="font-heading text-2xl font-bold">
-              Dream<span className="text-primary">Rest</span>
-            </h3>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed">
-              India's most loved sleep brand. Engineered with Japan's SmartGRID technology for the perfect night's sleep.
+    <footer className="bg-[#1A1614] text-white">
+      {/* Main footer */}
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 pt-16 pb-8">
+        {/* Top row */}
+        <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12 pb-12 border-b border-white/10">
+          {/* Brand */}
+          <div className="lg:max-w-xs">
+            <div className="font-display text-2xl font-light italic text-white mb-4">
+              JoybirdLux
+            </div>
+            <p className="text-sm text-white/50 leading-relaxed mb-6">
+              Premium mid-century modern furniture, made to order. Designed for life, built to last.
             </p>
+            {/* Social */}
             <div className="flex gap-3">
-              {[Instagram, Twitter, Facebook, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="p-2.5 rounded-full bg-primary-foreground/10 hover:bg-primary/30 transition-colors" aria-label="Social media">
-                  <Icon className="w-4 h-4" />
+              {[
+                { label: 'Instagram', href: 'https://instagram.com/joybird/' },
+                { label: 'Pinterest', href: 'https://pinterest.com/joybird/' },
+                { label: 'Facebook', href: 'https://facebook.com/wearejoybird' },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-xs font-medium text-white/60 hover:bg-white hover:text-[#1A1614] transition-all duration-300"
+                  aria-label={s.label}
+                >
+                  {s.label[0]}
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-heading font-bold text-sm uppercase tracking-wider">Products</h4>
-            {["Mattresses", "Pillows", "Recliners", "Bed Frames", "Comforters"].map((l) => (
-              <a key={l} href="#" className="block text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{l}</a>
-            ))}
+          {/* Links */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Shop</h4>
+              <ul className="space-y-2.5">
+                {['Sofas', 'Sectionals', 'Chairs', 'Dining', 'Bedroom', 'Outdoor'].map((l) => (
+                  <li key={l}>
+                    <Link href="/home-page" className="text-sm text-white/60 hover:text-white transition-colors">
+                      {l}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Company</h4>
+              <ul className="space-y-2.5">
+                {['About Us', 'Sustainability', 'Careers', 'Press', 'Showrooms', 'Blog'].map((l) => (
+                  <li key={l}>
+                    <Link href="/home-page" className="text-sm text-white/60 hover:text-white transition-colors">
+                      {l}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Support</h4>
+              <ul className="space-y-2.5">
+                {['FAQ', 'Shipping', 'Returns', 'Warranty', 'Care Guide', 'Contact'].map((l) => (
+                  <li key={l}>
+                    <Link href="/home-page" className="text-sm text-white/60 hover:text-white transition-colors">
+                      {l}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-heading font-bold text-sm uppercase tracking-wider">Company</h4>
-            {["About Us", "Careers", "Blog", "Press", "Contact"].map((l) => (
-              <a key={l} href="#" className="block text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{l}</a>
-            ))}
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-heading font-bold text-sm uppercase tracking-wider">Newsletter</h4>
-            <p className="text-sm text-primary-foreground/60">Get sleep tips and exclusive offers.</p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email"
-                className="flex-1 px-4 py-3 rounded-xl bg-primary-foreground/10 border border-primary-foreground/10 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary/50 transition-colors"
-              />
-              <button className="px-5 py-3 rounded-xl gradient-primary font-semibold text-sm hover:shadow-glow transition-all">
-                Join
-              </button>
-            </div>
-            <div className="space-y-2 text-sm text-primary-foreground/60">
-              <div className="flex items-center gap-2"><Phone className="w-3.5 h-3.5" /> 1800-123-4567</div>
-              <div className="flex items-center gap-2"><Mail className="w-3.5 h-3.5" /> hello@dreamrest.in</div>
-            </div>
+          {/* Newsletter */}
+          <div className="lg:max-w-xs">
+            <h4 className="font-display text-xl font-light italic text-white mb-2">Join the club</h4>
+            <p className="text-sm text-white/50 mb-4">
+              Exclusive sales, VIP perks, and design inspiration delivered to your inbox.
+            </p>
+            {subscribed ? (
+              <div className="bg-brand-teal/20 border border-brand-teal/30 rounded-xl px-4 py-3 text-sm text-brand-teal">
+                Welcome to the club! ✓
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-brand-teal focus:bg-white/15 transition-all"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="bg-brand-teal hover:bg-brand-teal-light text-white px-4 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-teal"
+                >
+                  Join
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 pt-8 text-center text-sm text-primary-foreground/40">
-          © 2026 DreamRest. All rights reserved. Made with ♥ for better sleep.
+        {/* Bottom row */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+          <span>© 2026 JoybirdLux, a La-Z-Boy Incorporated Company. All Rights Reserved.</span>
+          <div className="flex gap-6">
+            <Link href="/home-page" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+            <Link href="/home-page" className="hover:text-white/60 transition-colors">Terms of Service</Link>
+            <Link href="/home-page" className="hover:text-white/60 transition-colors">Accessibility</Link>
+          </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
