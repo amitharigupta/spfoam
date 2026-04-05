@@ -104,6 +104,16 @@
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .safe-area-pb {
+    padding-bottom: env(safe-area-inset-bottom, 0.5rem);
+  }
 }
 
 @keyframes float {
