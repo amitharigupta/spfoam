@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -14,24 +15,85 @@ const faqs = [
   { q: "How do I clean my sofa?", a: "Vacuum regularly and blot spills immediately. Our performance fabrics are designed to resist stains. Professional cleaning is recommended annually." },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
 const ProductFAQ = () => (
   <section className="py-16 md:py-24">
     <div className="container max-w-3xl">
-      <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground text-center mb-12">
+      <motion.h2
+        className="text-2xl md:text-3xl font-heading font-bold text-foreground text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         Frequently Asked Questions
-      </h2>
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="border-border/50">
-            <AccordionTrigger className="text-left text-base font-heading font-semibold hover:no-underline">
-              {faq.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
-              {faq.a}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      </motion.h2>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, i) => (
+            <motion.div key={i} variants={itemVariants}>
+              <AccordionItem value={`faq-${i}`} className="border-border/50">
+                <AccordionTrigger className="text-left text-base font-heading font-semibold hover:no-underline hover:text-primary transition-colors duration-300">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm text-muted-foreground leading-relaxed">
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {faq.a}
+                  </motion.div>
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
+      </motion.div>
+
+      {/* Bottom CTA */}
+      <motion.div
+        className="mt-12 text-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        <p className="text-muted-foreground mb-4">
+          Still have questions? Our team is here to help.
+        </p>
+        <motion.button
+          className="px-8 py-3 rounded-full bg-muted border border-border text-foreground font-semibold text-sm hover:bg-foreground hover:text-background transition-all duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Contact Support
+        </motion.button>
+      </motion.div>
     </div>
   </section>
 );
