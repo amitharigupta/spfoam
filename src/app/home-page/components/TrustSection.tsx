@@ -53,7 +53,7 @@ const TRUST_ITEMS = [
 const FAQS = [
   {
     q: 'How long does it take to receive my sofa?',
-    a: 'All Joybird pieces are made to order. The Aubrey Sofa ships in 8–10 weeks from order placement. You\'ll receive weekly email updates and a delivery window confirmation 1 week before arrival.',
+    a: 'All SP Foam Centre pieces are made to order. The Aubrey Sofa ships in 1–2 weeks from order placement. You\'ll receive weekly email updates and a delivery window confirmation 1 day before arrival.',
   },
   {
     q: 'Can I really customize the fabric and size?',
@@ -65,7 +65,7 @@ const FAQS = [
   },
   {
     q: 'How do I care for the upholstery?',
-    a: 'Most Joybird fabrics are spot-clean with mild soap and water. Performance and pet-friendly fabrics are machine-washable. Each order includes a care card specific to your selected fabric.',
+    a: 'Most SP Foam Centre fabrics are spot-clean with mild soap and water. Performance and pet-friendly fabrics are machine-washable. Each order includes a care card specific to your selected fabric.',
   },
   {
     q: 'Do you offer free design consultations?',
@@ -122,7 +122,7 @@ export default function TrustSection() {
             </div>
             <div className="flex gap-3">
               <button className="bg-brand-teal hover:bg-brand-teal-light text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-teal">
-                Ask the Joybird Team
+                Ask the SP Foam Centre Team
               </button>
               <button className="border border-white/20 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition-all">
                 Free Design Services

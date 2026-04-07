@@ -9,10 +9,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'JoybirdLux — The Aubrey Sofa | Premium Custom Furniture',
-  description: 'Discover the Aubrey Sofa by JoybirdLux. Mid-century modern design with 200+ fabric options, free in-home delivery, and a limited lifetime warranty.',
+  title: 'SP Foam Centre — The Aubrey Sofa | Premium Custom Furniture',
+  description: 'Discover the Aubrey Sofa by SP Foam Centre. Mid-century modern design with 200+ fabric options, free in-home delivery, and a limited lifetime warranty.',
   openGraph: {
-    title: 'JoybirdLux — Aubrey Sofa',
+    title: 'SP Foam Centre — Aubrey Sofa',
     description: 'Mid-century modern sofa with 200+ fabric choices and lifetime warranty.',
     images: [{ url: '/assets/images/app_logo.png', width: 1200, height: 630 }],
   },

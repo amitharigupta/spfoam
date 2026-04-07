@@ -4,6 +4,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import { StarIcon, HeartIcon, ShareIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { StarIcon as StarSolid } from '@heroicons/react/24/solid';
+import { ACTION_BEFORE_REFRESH } from 'next/dist/next-devtools/dev-overlay/shared';
 
 const PRODUCT_IMAGES = [
 {
@@ -153,7 +154,10 @@ export default function HeroSection() {
             {PRODUCT_IMAGES.map((img, i) =>
             <button
               key={i}
-              onClick={() => setActiveImage(i)}
+              onClick={() => {
+  console.log('clicked', i);
+  setActiveImage(i);
+}}
               className={`relative aspect-square rounded-xl overflow-hidden bg-[var(--bg-warm)] transition-all duration-300 ${
               i === activeImage ?
               'ring-2 ring-brand-teal ring-offset-1' : 'opacity-70 hover:opacity-100'}`
@@ -161,6 +165,7 @@ export default function HeroSection() {
               aria-label={`Thumbnail ${i + 1}`}>
               
                 <AppImage
+                key={activeImage}
                 src={img.src}
                 alt={img.alt}
                 fill

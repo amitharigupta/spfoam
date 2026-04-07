@@ -2,22 +2,65 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShoppingBagIcon, HeartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/outline';
 
 const NAV_ITEMS = [
-  { label: 'Living Room', href: '/home-page' },
-  { label: 'Dining Room', href: '/home-page' },
-  { label: 'Bedroom', href: '/home-page' },
-  { label: 'Home Office', href: '/home-page' },
-  { label: 'Outdoor', href: '/home-page' },
-  { label: 'Decor', href: '/home-page' },
-  { label: 'Sale', href: '/home-page', highlight: true },
+  { label: 'Living Room', href: '/living-room',
+    submenu: [
+      { label: 'Chairs', href: '/livingroom/chairs'},
+      { label: 'Tables', href: '/livingroom/tables'},
+      { label: 'Storage', href: '/livingroom/storage'},
+      { label: 'New Arrivals', href: '/livingroom/new', tag: 'New'}
+    ]
+   },
+  {
+    label: 'Dining Room',
+    href: '/dining-room',
+    submenu: [
+      { label: 'Dining Tables', href: '/dining/tables' },
+      { label: 'Dining Chairs', href: '/dining/chairs' },
+      { label: 'Bar Carts + Cabinets', href: '/dining/bar' },
+      { label: 'New Arrivals', href: '/dining/new', tag: 'New' },
+    ],
+    image: '/images/dining.jpg', // 👈 add your image in public/images
+  },
+  {
+    label: 'Bedroom', icon: '🛏️', href: '/bedroom',
+    submenu: [
+      { label: 'Beds', href: '/bedroom/beds' },
+      { label: 'Nightstands', href: '/bedroom/nightstands' },
+      { label: 'Dressers + Chests', href: '/bedroom/dressers&chest' },
+      { label: 'New Arrivals', href: '/bedroom/new', tag: 'New' },
+    ],
+  },
+  {
+    label: 'Home Office', href: '/home-office',
+    submenu: [
+      { label: 'Beds', href: '/home-office/desks' },
+      { label: 'Book Cases', href: '/home-office/book-cases' },
+      { label: 'Office Chairs', href: '/home-office/office-chair' },
+      { label: 'New Arrivals', href: '/home-office/new', tag: 'New' },
+    ],
+  },
+  {
+    label: 'Outdoor', href: '/outdoor',
+    submenu: [
+      { label: 'Outdoor sofas', href: '/outdoor/outdoor-sofas' },
+      { label: 'Outdoor chairs', href: '/outdoor/outdoor-chairs' },
+      { label: 'Outdoor tables', href: '/outdoor/outdoor-tables' },
+      { label: 'New Arrivals', href: '/outdoor/new', tag: 'New' },
+    ]
+  },
+  { label: 'Decor', href: '/decor' },
+  { label: 'Sale', href: '/sale', highlight: true },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [cartCount] = useState(1);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -29,14 +72,13 @@ export default function Header() {
     <>
       {/* Promo bar */}
       <div className="w-full bg-brand-teal text-white text-center py-2 px-4 text-xs font-medium tracking-wide">
-        Save 30% sitewide — Sale ends soon &nbsp;·&nbsp; Free In-Home Delivery on orders over $999
+        Save 30% sitewide — Sale ends soon &nbsp;·&nbsp; Free In-Home Delivery on orders over Rs:1000
       </div>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-          scrolled
-            ? 'bg-cream/95 backdrop-blur-xl shadow-soft border-b border-[var(--border-light)]'
-            : 'bg-cream/80 backdrop-blur-md'
-        }`}
+        className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled
+          ? 'bg-cream/95 backdrop-blur-xl shadow-soft border-b border-[var(--border-light)]'
+          : 'bg-cream/80 backdrop-blur-md'
+          }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16 md:h-18">
@@ -45,7 +87,7 @@ export default function Header() {
               <svg
                 viewBox="0 0 100 20"
                 className="h-5 w-auto"
-                aria-label="JoybirdLux"
+                aria-label="SPFoamCentre"
               >
                 <text
                   x="0"
@@ -56,25 +98,71 @@ export default function Header() {
                   fill="#016A78"
                   letterSpacing="1"
                 >
-                  JOYBIRDLUX
+                  SP Foam
                 </text>
               </svg>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <nav className="hidden lg:flex items-center gap-6 xl:gap-8 relative">
               {NAV_ITEMS?.map((item) => (
-                <Link
-                  key={item?.label}
-                  href={item?.href}
-                  className={`text-sm font-medium transition-colors duration-200 relative group ${
-                    item?.highlight
-                      ? 'text-brand-cognac' :'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                  }`}
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => setActiveMenu(item.label)}
+                  onMouseLeave={() => setActiveMenu(null)}
                 >
-                  {item?.label}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-brand-teal group-hover:w-full transition-all duration-300" />
-                </Link>
+                  <Link
+                    href={item.href}
+                    className={`text-sm ${item.highlight
+                      ? 'text-orange-600'
+                      : 'text-gray-700 hover:text-black'
+                      }`}
+                  >
+                    {item.label}
+                  </Link>
+
+                  {/* ✅ Mega Menu */}
+                  {item.submenu && activeMenu === item.label && (
+                    <div className="absolute left-0 top-full mt-4 w-[750px] bg-white shadow-xl rounded-xl p-6 flex gap-6 z-50">
+
+                      {/* LEFT LINKS */}
+                      <div className="w-1/3 flex flex-col gap-3">
+                        {item.submenu.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            className="text-sm text-gray-700 hover:text-black flex items-center gap-2"
+                          >
+                            {sub.label}
+                            {sub.tag && (
+                              <span className="text-xs bg-gray-200 px-2 rounded">
+                                {sub.tag}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+
+                        <Link
+                          href="/dining-room"
+                          className="mt-4 bg-teal-700 text-white px-4 py-2 rounded text-sm text-center"
+                        >
+                          Shop All {item.label}
+                        </Link>
+                      </div>
+
+                      {/* RIGHT IMAGE */}
+                      <div className="w-2/3 relative h-[220px]">
+                        <Image
+                          src={item.image}
+                          alt={item.label}
+                          fill
+                          className="object-cover rounded-lg"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
               ))}
               <Link
                 href="/home-page"
@@ -129,9 +217,8 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 cubic-bezier-spring ${
-            mobileOpen ? 'max-h-[400px]' : 'max-h-0'
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-500 cubic-bezier-spring ${mobileOpen ? 'max-h-[400px]' : 'max-h-0'
+            }`}
         >
           <div className="bg-cream border-t border-[var(--border-light)] px-4 py-4">
             <nav className="flex flex-col gap-1">
@@ -140,10 +227,9 @@ export default function Header() {
                   key={item?.label}
                   href={item?.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`py-3 px-3 rounded-lg text-sm font-medium transition-colors ${
-                    item?.highlight
-                      ? 'text-brand-cognac' :'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-warm)]'
-                  }`}
+                  className={`py-3 px-3 rounded-lg text-sm font-medium transition-colors ${item?.highlight
+                    ? 'text-brand-cognac' : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-warm)]'
+                    }`}
                 >
                   {item?.label}
                 </Link>
