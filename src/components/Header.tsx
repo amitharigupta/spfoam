@@ -154,8 +154,8 @@ export default function Header() {
                       {/* RIGHT IMAGE */}
                       <div className="w-2/3 relative h-[220px]">
                         <Image
-                          src={item.image}
-                          alt={item.label}
+                          src={item?.image}
+                          alt={item?.label}
                           fill
                           className="object-cover rounded-lg"
                         />
