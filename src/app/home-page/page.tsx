@@ -9,6 +9,8 @@ import LifestyleSection from './components/LifestyleSection';
 import ReviewsSection from './components/ReviewsSection';
 import RecommendedProducts from './components/RecommendedProducts';
 import TrustSection from './components/TrustSection';
+import HeroBanner from './components/HeroBanner';
+import CategoryStrip from './components/CategorySection';
 
 export const metadata: Metadata = {
   title: 'Aubrey Sofa — Mid-Century Modern Custom Sofa | JoybirdLux',
@@ -73,6 +75,11 @@ export default function HomePage() {
       <Header />
 
       <main>
+        {/* Banner Section */}
+        <HeroBanner />
+
+        <CategoryStrip />
+
         {/* Hero: Product gallery + info */}
         <HeroSection />
 

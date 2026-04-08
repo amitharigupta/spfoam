@@ -6,14 +6,15 @@ import Image from 'next/image';
 import { ShoppingBagIcon, HeartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, UserIcon } from '@heroicons/react/24/outline';
 
 const NAV_ITEMS = [
-  { label: 'Living Room', href: '/living-room',
+  {
+    label: 'Living Room', href: '/living-room',
     submenu: [
-      { label: 'Chairs', href: '/livingroom/chairs'},
-      { label: 'Tables', href: '/livingroom/tables'},
-      { label: 'Storage', href: '/livingroom/storage'},
-      { label: 'New Arrivals', href: '/livingroom/new', tag: 'New'}
+      { label: 'Chairs', href: '/livingroom/chairs' },
+      { label: 'Tables', href: '/livingroom/tables' },
+      { label: 'Storage', href: '/livingroom/storage' },
+      { label: 'New Arrivals', href: '/livingroom/new', tag: 'New' }
     ]
-   },
+  },
   {
     label: 'Dining Room',
     href: '/dining-room',
@@ -153,12 +154,18 @@ export default function Header() {
 
                       {/* RIGHT IMAGE */}
                       <div className="w-2/3 relative h-[220px]">
-                        <Image
-                          src={item?.image}
-                          alt={item?.label}
-                          fill
-                          className="object-cover rounded-lg"
-                        />
+                        {item?.image ? (
+                          <Image
+                            src={item.image}
+                            alt={item.label}
+                            fill
+                            className="object-cover rounded-lg"
+                          />
+                        ) : (
+                          <div className="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center text-xs text-gray-400">
+                            No Image
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}
