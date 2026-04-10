@@ -54,10 +54,10 @@ export default function HeroBanner() {
           <span>Premium In-Home Delivery</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <CheckCircleIcon className="w-5 h-5" />
           <span>Financing as low as 0% APR</span>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-2">
           <CheckCircleIcon className="w-5 h-5" />
@@ -66,13 +66,13 @@ export default function HeroBanner() {
 
         <div className="flex items-center gap-2">
           <WrenchScrewdriverIcon className="w-5 h-5" />
-          <span>Free Design Services*</span>
+          <span>Live Workshop Pics</span>
         </div>
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <GiftIcon className="w-5 h-5" />
           <span>Free Swatch Kit</span>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -3,20 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CATEGORIES = [
-  { label: 'Sofas and Sectionals', image: '/images/categories/sofa.jpg', href: '/sofas' },
-  { label: 'Chairs', image: '/images/categories/chair.jpg', href: '/chairs' },
-  { label: 'Bedroom', image: '/images/categories/bed.jpg', href: '/bed' },
-  { label: 'Decor', image: '/images/categories/decor.jpg', href: '/decor' },
-];
-
-export default function CategoryStrip() {
+export default function CategoryStrip({ CATEGORIES }) {
   return (
     <section className="w-full bg-[#f5f5f5] py-8">
       <div className="max-w-[1200px] mx-auto px-4">
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-10 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-10 text-center">
 
           {CATEGORIES.map((item) => (
             <Link
@@ -27,13 +20,23 @@ export default function CategoryStrip() {
               
               {/* 🔥 IMAGE CONTAINER (FIXED SIZE) */}
               <div className="relative w-full h-[120px] sm:h-[140px] md:h-[160px] lg:h-[180px] rounded-lg overflow-hidden bg-gray-100">
-                
+                {item.image ? (
                 <Image
                   src={item.image}
                   alt={item.label}
                   fill
                   className="object-cover group-hover:scale-105 transition duration-300"
                 />
+              ) : (
+                <video
+                  src={item.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                />
+              )}
               </div>
 
               {/* LABEL */}

@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:max-w-xs">
             <div className="font-display text-2xl font-light italic text-white mb-4">
-              JoybirdLux
+              SP Foam Centre
             </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6">
               Premium mid-century modern furniture, made to order. Designed for life, built to last.
@@ -131,6 +131,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <button
+        className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-2.5 bg-brand-teal hover:bg-brand-teal-light text-white pl-4 pr-5 py-3 rounded-full shadow-teal transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 text-sm font-semibold"
+        aria-label="Get help from our design team">
+        
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        Need Help?
+      </button>
     </footer>
+    
   );
 }

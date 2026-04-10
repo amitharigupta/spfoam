@@ -67,10 +67,10 @@ const FAQS = [
     q: 'How do I care for the upholstery?',
     a: 'Most SP Foam Centre fabrics are spot-clean with mild soap and water. Performance and pet-friendly fabrics are machine-washable. Each order includes a care card specific to your selected fabric.',
   },
-  {
-    q: 'Do you offer free design consultations?',
-    a: 'Yes! Our Free Design Services team offers complimentary consultations via video call, chat, or in our showrooms. They can help with fabric selection, room layout, and styling. Book online or call us anytime.',
-  },
+  // {
+  //   q: 'Do you offer free design consultations?',
+  //   a: 'Yes! Our Free Design Services team offers complimentary consultations via video call, chat, or in our showrooms. They can help with fabric selection, room layout, and styling. Book online or call us anytime.',
+  // },
 ];
 
 export default function TrustSection() {
@@ -124,9 +124,9 @@ export default function TrustSection() {
               <button className="bg-brand-teal hover:bg-brand-teal-light text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-teal">
                 Ask the SP Foam Centre Team
               </button>
-              <button className="border border-white/20 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition-all">
+              {/* <button className="border border-white/20 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-white/10 transition-all">
                 Free Design Services
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

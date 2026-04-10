@@ -12,11 +12,19 @@ import TrustSection from './components/TrustSection';
 import HeroBanner from './components/HeroBanner';
 import CategoryStrip from './components/CategorySection';
 
+const CATEGORIES: any = [
+  { label: 'Sofas and Sectionals', image: '/images/categories/sofa.jpg', href: '/sofas' },
+  { label: 'Chairs', image: '/images/categories/chair.jpg', href: '/chairs' },
+  { label: 'Bedroom', image: '/images/categories/bed.jpg', href: '/bed' },
+  { label: 'Arm Chairs', image: '/images/categories/decor.jpg', href: '/arm-chairs' },
+  { label: 'Arm Chairs', image: '/images/categories/decor.jpg', href: '/arm-chairs' },
+];
+
 export const metadata: Metadata = {
-  title: 'Aubrey Sofa — Mid-Century Modern Custom Sofa | JoybirdLux',
-  description: 'Shop the Aubrey Sofa by JoybirdLux. Iconic swoop arms, 200+ fabric options, lifetime warranty, and free in-home delivery. Made to order in the USA.',
+  title: 'Aubrey Sofa — Mid-Century Modern Custom Sofa | SP Foam Centre',
+  description: 'Shop the Aubrey Sofa by SP Foam Centre. Iconic swoop arms, 200+ fabric options, lifetime warranty, and free in-home delivery. Made to order in the USA.',
   openGraph: {
-    title: 'Aubrey Sofa | JoybirdLux',
+    title: 'Aubrey Sofa | SP Foam Centre',
     description: 'Mid-century modern sofa with 200+ fabric choices. Free delivery, lifetime warranty.',
     images: [
     {
@@ -72,16 +80,16 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
       
 
-      <Header />
+      {/* <Header /> */}
 
       <main>
         {/* Banner Section */}
         <HeroBanner />
 
-        <CategoryStrip />
+        <CategoryStrip CATEGORIES={CATEGORIES} />
 
         {/* Hero: Product gallery + info */}
-        <HeroSection />
+        {/* <HeroSection /> */}
 
         {/* Divider */}
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
@@ -95,30 +103,22 @@ export default function HomePage() {
         <ProductDetailsSection />
 
         {/* Lifestyle / parallax */}
-        <LifestyleSection />
+        {/* <LifestyleSection /> */}
 
         {/* Reviews */}
-        <ReviewsSection />
+        {/* <ReviewsSection /> */}
 
         {/* Recommended products */}
-        <RecommendedProducts />
+        {/* <RecommendedProducts /> */}
 
         {/* Trust + FAQ */}
         <TrustSection />
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
 
       {/* Floating help button */}
-      <button
-        className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-2.5 bg-brand-teal hover:bg-brand-teal-light text-white pl-4 pr-5 py-3 rounded-full shadow-teal transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 text-sm font-semibold"
-        aria-label="Get help from our design team">
-        
-        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-        </svg>
-        Need Help?
-      </button>
+      
     </>);
 
 }

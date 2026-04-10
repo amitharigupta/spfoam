@@ -8,53 +8,53 @@ import { ShoppingBagIcon, HeartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, 
 const NAV_ITEMS = [
   {
     label: 'Living Room', href: '/living-room',
-    submenu: [
-      { label: 'Chairs', href: '/livingroom/chairs' },
-      { label: 'Tables', href: '/livingroom/tables' },
-      { label: 'Storage', href: '/livingroom/storage' },
-      { label: 'New Arrivals', href: '/livingroom/new', tag: 'New' }
-    ]
+    // submenu: [
+    //   { label: 'Chairs', href: '/livingroom/chairs' },
+    //   { label: 'Tables', href: '/livingroom/tables' },
+    //   { label: 'Storage', href: '/livingroom/storage' },
+    //   { label: 'New Arrivals', href: '/livingroom/new', tag: 'New' }
+    // ]
   },
   {
     label: 'Dining Room',
     href: '/dining-room',
-    submenu: [
-      { label: 'Dining Tables', href: '/dining/tables' },
-      { label: 'Dining Chairs', href: '/dining/chairs' },
-      { label: 'Bar Carts + Cabinets', href: '/dining/bar' },
-      { label: 'New Arrivals', href: '/dining/new', tag: 'New' },
-    ],
+    // submenu: [
+    //   { label: 'Dining Tables', href: '/dining/tables' },
+    //   { label: 'Dining Chairs', href: '/dining/chairs' },
+    //   { label: 'Bar Carts + Cabinets', href: '/dining/bar' },
+    //   { label: 'New Arrivals', href: '/dining/new', tag: 'New' },
+    // ],
     image: '/images/dining.jpg', // 👈 add your image in public/images
   },
   {
     label: 'Bedroom', icon: '🛏️', href: '/bedroom',
-    submenu: [
-      { label: 'Beds', href: '/bedroom/beds' },
-      { label: 'Nightstands', href: '/bedroom/nightstands' },
-      { label: 'Dressers + Chests', href: '/bedroom/dressers&chest' },
-      { label: 'New Arrivals', href: '/bedroom/new', tag: 'New' },
-    ],
+    // submenu: [
+    //   { label: 'Beds', href: '/bedroom/beds' },
+    //   { label: 'Nightstands', href: '/bedroom/nightstands' },
+    //   { label: 'Dressers + Chests', href: '/bedroom/dressers&chest' },
+    //   { label: 'New Arrivals', href: '/bedroom/new', tag: 'New' },
+    // ],
   },
   {
-    label: 'Home Office', href: '/home-office',
-    submenu: [
-      { label: 'Beds', href: '/home-office/desks' },
-      { label: 'Book Cases', href: '/home-office/book-cases' },
-      { label: 'Office Chairs', href: '/home-office/office-chair' },
-      { label: 'New Arrivals', href: '/home-office/new', tag: 'New' },
-    ],
+    label: 'Arm Chairs', href: '/arm-chairs',
+    // submenu: [
+    //   { label: 'Beds', href: '/arm-chairs/desks' },
+    //   { label: 'Book Cases', href: '/arm-chairs/book-cases' },
+    //   { label: 'Office Chairs', href: '/arm-chairs/office-chair' },
+    //   { label: 'New Arrivals', href: '/arm-chairs/new', tag: 'New' },
+    // ],
   },
   {
-    label: 'Outdoor', href: '/outdoor',
-    submenu: [
-      { label: 'Outdoor sofas', href: '/outdoor/outdoor-sofas' },
-      { label: 'Outdoor chairs', href: '/outdoor/outdoor-chairs' },
-      { label: 'Outdoor tables', href: '/outdoor/outdoor-tables' },
-      { label: 'New Arrivals', href: '/outdoor/new', tag: 'New' },
-    ]
+    label: 'Chairs', href: '/chairs',
+    // submenu: [
+    //   { label: 'sofas', href: '/chairs/outdoor-sofas' },
+    //   { label: 'chairs', href: '/chairs/outdoor-chairs' },
+    //   { label: 'tables', href: '/chairs/outdoor-tables' },
+    //   { label: 'New Arrivals', href: '/chairs/new', tag: 'New' },
+    // ]
   },
-  { label: 'Decor', href: '/decor' },
-  { label: 'Sale', href: '/sale', highlight: true },
+  // { label: 'Decor', href: '/decor' },
+  // { label: 'Sale', href: '/sale', highlight: true },
 ];
 
 export default function Header() {
@@ -172,10 +172,10 @@ export default function Header() {
                 </div>
               ))}
               <Link
-                href="/home-page"
+                href="/live-workshop"
                 className="text-sm font-semibold text-brand-teal hover:text-brand-teal-dark transition-colors duration-200"
               >
-                Free Design Services
+                Live Workshop Pics
               </Link>
             </nav>
 
@@ -242,11 +242,11 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="/home-page"
+                href="/live-workshop"
                 onClick={() => setMobileOpen(false)}
                 className="py-3 px-3 rounded-lg text-sm font-semibold text-brand-teal hover:bg-[var(--bg-warm)] transition-colors"
               >
-                Free Design Services
+                Live Workshop
               </Link>
             </nav>
           </div>
