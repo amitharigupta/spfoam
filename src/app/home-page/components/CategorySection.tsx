@@ -11,9 +11,9 @@ export default function CategoryStrip({ CATEGORIES }) {
         {/* Responsive Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-10 text-center">
 
-          {CATEGORIES.map((item) => (
+          {CATEGORIES.map((item, index) => (
             <Link
-              key={item.label}
+              key={`${item.label}-${index}`}
               href={item.href}
               className="group flex flex-col items-center"
             >
@@ -25,6 +25,7 @@ export default function CategoryStrip({ CATEGORIES }) {
                   src={item.image}
                   alt={item.label}
                   fill
+                  loading="lazy"
                   className="object-cover group-hover:scale-105 transition duration-300"
                 />
               ) : (
@@ -34,6 +35,7 @@ export default function CategoryStrip({ CATEGORIES }) {
                   loop
                   muted
                   playsInline
+                  preload='none'
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                 />
               )}

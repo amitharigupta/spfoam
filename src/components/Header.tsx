@@ -45,7 +45,7 @@ const NAV_ITEMS = [
     // ],
   },
   {
-    label: 'Chairs', href: '/chairs',
+    label: 'Banch', href: '/banch',
     // submenu: [
     //   { label: 'sofas', href: '/chairs/outdoor-sofas' },
     //   { label: 'chairs', href: '/chairs/outdoor-chairs' },

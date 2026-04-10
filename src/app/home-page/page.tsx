@@ -17,7 +17,7 @@ const CATEGORIES: any = [
   { label: 'Chairs', image: '/images/categories/chair.jpg', href: '/chairs' },
   { label: 'Bedroom', image: '/images/categories/bed.jpg', href: '/bed' },
   { label: 'Arm Chairs', image: '/images/categories/decor.jpg', href: '/arm-chairs' },
-  { label: 'Arm Chairs', image: '/images/categories/decor.jpg', href: '/arm-chairs' },
+  { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
 ];
 
 export const metadata: Metadata = {
