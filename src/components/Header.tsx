@@ -16,8 +16,8 @@ const NAV_ITEMS = [
     // ]
   },
   {
-    label: 'Dining Room',
-    href: '/dining-room',
+    label: 'Barstool',
+    href: '/barstool',
     // submenu: [
     //   { label: 'Dining Tables', href: '/dining/tables' },
     //   { label: 'Dining Chairs', href: '/dining/chairs' },
