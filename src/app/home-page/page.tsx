@@ -13,11 +13,15 @@ import HeroBanner from './components/HeroBanner';
 import CategoryStrip from './components/CategorySection';
 
 const CATEGORIES: any = [
-  { label: 'Sofas and Sectionals', image: '/images/categories/sofa.jpg', href: '/sofas' },
-  { label: 'Chairs', image: '/images/categories/chair.jpg', href: '/chairs' },
+  { label: 'Sofas', image: '/images/categories/sofa.jpg', href: '/sofas' },
+  { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofas' },
+  { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
   { label: 'Bed Mattress', image: '/images/categories/bed-mattress.jpg', href: '/bed-mattress' },
-  { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/bar-stool' },
+  { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/barstool' },
+  { label: 'Puffy', image: '/images/categories/puffy.jpg', href: '/puffy' },
+  { label: 'Sofa Raw Material', image: '/images/categories/raw-material.jpg', href: '/raw-material' },
+  { label: 'Live Workshop', image: '/images/categories/live-workshop.jpg', href: '/live-workshop' },
 ];
 
 export const metadata: Metadata = {

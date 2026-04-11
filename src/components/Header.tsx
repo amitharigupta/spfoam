@@ -7,7 +7,7 @@ import { ShoppingBagIcon, HeartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, 
 
 const NAV_ITEMS = [
   {
-    label: 'Living Room', href: '/living-room',
+    label: 'Sofa', href: '/sofas',
     // submenu: [
     //   { label: 'Chairs', href: '/livingroom/chairs' },
     //   { label: 'Tables', href: '/livingroom/tables' },
@@ -16,45 +16,21 @@ const NAV_ITEMS = [
     // ]
   },
   {
-    label: 'Barstool',
-    href: '/barstool',
-    // submenu: [
-    //   { label: 'Dining Tables', href: '/dining/tables' },
-    //   { label: 'Dining Chairs', href: '/dining/chairs' },
-    //   { label: 'Bar Carts + Cabinets', href: '/dining/bar' },
-    //   { label: 'New Arrivals', href: '/dining/new', tag: 'New' },
-    // ],
-    image: '/images/dining.jpg', // 👈 add your image in public/images
+    label: 'Sectional Sofa',
+    href: '/sectional-sofas',
   },
   {
-    label: 'Bedroom', icon: '🛏️', href: '/bedroom',
-    // submenu: [
-    //   { label: 'Beds', href: '/bedroom/beds' },
-    //   { label: 'Nightstands', href: '/bedroom/nightstands' },
-    //   { label: 'Dressers + Chests', href: '/bedroom/dressers&chest' },
-    //   { label: 'New Arrivals', href: '/bedroom/new', tag: 'New' },
-    // ],
+    label: 'Bed Mattress', href: '/bed-mattress',
   },
   {
     label: 'Arm Chairs', href: '/arm-chairs',
-    // submenu: [
-    //   { label: 'Beds', href: '/arm-chairs/desks' },
-    //   { label: 'Book Cases', href: '/arm-chairs/book-cases' },
-    //   { label: 'Office Chairs', href: '/arm-chairs/office-chair' },
-    //   { label: 'New Arrivals', href: '/arm-chairs/new', tag: 'New' },
-    // ],
   },
   {
     label: 'Banch', href: '/banch',
-    // submenu: [
-    //   { label: 'sofas', href: '/chairs/outdoor-sofas' },
-    //   { label: 'chairs', href: '/chairs/outdoor-chairs' },
-    //   { label: 'tables', href: '/chairs/outdoor-tables' },
-    //   { label: 'New Arrivals', href: '/chairs/new', tag: 'New' },
-    // ]
   },
-  // { label: 'Decor', href: '/decor' },
-  // { label: 'Sale', href: '/sale', highlight: true },
+  { label: 'Bar Stool', href: '/barstool' },
+  { label: 'Puffy', href: '/puffy' },
+  { label: 'Raw Material', href: '/raw-material' },
 ];
 
 export default function Header() {
