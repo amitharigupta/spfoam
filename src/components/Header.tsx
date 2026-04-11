@@ -72,9 +72,9 @@ export default function Header() {
   return (
     <>
       {/* Promo bar */}
-      <div className="w-full bg-brand-teal text-white text-center py-2 px-4 text-xs font-medium tracking-wide">
+      {/* <div className="w-full bg-brand-teal text-white text-center py-2 px-4 text-xs font-medium tracking-wide">
         Save 30% sitewide — Sale ends soon &nbsp;·&nbsp; Free In-Home Delivery on orders over Rs:1000
-      </div>
+      </div> */}
       <header
         className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled
           ? 'bg-cream/95 backdrop-blur-xl shadow-soft border-b border-[var(--border-light)]'
