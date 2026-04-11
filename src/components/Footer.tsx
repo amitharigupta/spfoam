@@ -32,9 +32,9 @@ export default function Footer() {
             {/* Social */}
             <div className="flex gap-3">
               {[
-                { label: 'Instagram', href: 'https://instagram.com/joybird/' },
-                { label: 'Pinterest', href: 'https://pinterest.com/joybird/' },
-                { label: 'Facebook', href: 'https://facebook.com/wearejoybird' },
+                { label: 'Instagram', href: 'https://instagram.com/spfoam/' },
+                { label: 'Pinterest', href: 'https://pinterest.com/spfoam/' },
+                { label: 'Facebook', href: 'https://facebook.com/spfoam' },
               ].map((s) => (
                 <a
                   key={s.label}
@@ -67,7 +67,7 @@ export default function Footer() {
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Company</h4>
               <ul className="space-y-2.5">
-                {['About Us', 'Sustainability', 'Careers', 'Press', 'Showrooms', 'Blog'].map((l) => (
+                {['About Us', 'Sustainability', 'Careers', 'Showrooms'].map((l) => (
                   <li key={l}>
                     <Link href="/home-page" className="text-sm text-white/60 hover:text-white transition-colors">
                       {l}
@@ -79,7 +79,7 @@ export default function Footer() {
             <div>
               <h4 className="text-xs font-semibold uppercase tracking-widest text-white/40 mb-4">Support</h4>
               <ul className="space-y-2.5">
-                {['FAQ', 'Shipping', 'Returns', 'Warranty', 'Care Guide', 'Contact'].map((l) => (
+                {['FAQ', 'Returns', 'Warranty', 'Care Guide', 'Contact'].map((l) => (
                   <li key={l}>
                     <Link href="/home-page" className="text-sm text-white/60 hover:text-white transition-colors">
                       {l}
@@ -123,22 +123,26 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
-          <span>© 2026 JoybirdLux, a La-Z-Boy Incorporated Company. All Rights Reserved.</span>
+          <span>© {new Date().getFullYear()} JoybirdLux, a La-Z-Boy Incorporated Company. All Rights Reserved.</span>
           <div className="flex gap-6">
-            <Link href="/home-page" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
-            <Link href="/home-page" className="hover:text-white/60 transition-colors">Terms of Service</Link>
-            <Link href="/home-page" className="hover:text-white/60 transition-colors">Accessibility</Link>
+            <Link href="/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+            <Link href="/Terms-of-service" className="hover:text-white/60 transition-colors">Terms of Service</Link>
+            {/* <Link href="/" className="hover:text-white/60 transition-colors">Accessibility</Link> */}
           </div>
         </div>
       </div>
       <button
-        className="fixed bottom-6 right-6 z-40 hidden md:flex items-center gap-2.5 bg-brand-teal hover:bg-brand-teal-light text-white pl-4 pr-5 py-3 rounded-full shadow-teal transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 text-sm font-semibold"
+        className="fixed bottom-6 right-6 z-40 flex items-center justify-center gap-2.5 bg-brand-teal hover:bg-brand-teal-light text-white 
+        shadow-teal transition-all duration-300 w-14 h-14 md:w-auto md:h-auto
+        p-0 md:pl-4 md:pr-5 md:py-3 
+        rounded-full hover:scale-105 hover:-translate-y-0.5 
+        text-sm font-semibold"
         aria-label="Get help from our design team">
         
-        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg className="w-4 h-6 md:w-4 md:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
         </svg>
-        Need Help?
+        <span className="hidden md:inline">Need Help?</span>
       </button>
     </footer>
     
