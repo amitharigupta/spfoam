@@ -1,4 +1,7 @@
+"use client"
+import { useState } from "react";
 import CategoryStrip from "../home-page/components/CategorySection";
+import LoadMoreButton from "@/components/LoadMoreButton";
 
 const CATEGORIES: any = [
   { label: 'Arm Chair 1', video: '/videos/arm-chair/arm-chair1.mp4', href: '/arm-chair-1' },
@@ -26,9 +29,15 @@ const CATEGORIES: any = [
 ];
 
 export default function SofasPage() {
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 4);
+  };
   return (
-    <div className="bg-[#f5f5f5] min-h-screen p-4 md:p-8">
-         <CategoryStrip CATEGORIES={CATEGORIES} />
+    <div className="bg-[#f5f5f5] min-h-dvh pt-16 md:pt-20 p-4 md:p-8">
+      <CategoryStrip CATEGORIES={CATEGORIES.slice(0, visibleCount)} />
+      <LoadMoreButton onClick={handleLoadMore} isVisible={visibleCount < CATEGORIES.length} />
     </div>
   );
 }

@@ -15,9 +15,9 @@ import CategoryStrip from './components/CategorySection';
 const CATEGORIES: any = [
   { label: 'Sofas and Sectionals', image: '/images/categories/sofa.jpg', href: '/sofas' },
   { label: 'Chairs', image: '/images/categories/chair.jpg', href: '/chairs' },
-  { label: 'Bedroom', image: '/images/categories/bed.jpg', href: '/bed' },
-  { label: 'Arm Chairs', image: '/images/categories/decor.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
+  { label: 'Bed Mattress', image: '/images/categories/bed-mattress.jpg', href: '/bed-mattress' },
+  { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/bar-stool' },
 ];
 
 export const metadata: Metadata = {
