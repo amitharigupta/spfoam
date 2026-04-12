@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import { CATEGORIES } from '../categories';
 import Link from 'next/link';
 
-export default async function BanchDetailPage({ 
-    params 
-}: { 
-    params: Promise<{ slug: string }> 
+export default async function BanchDetailPage({
+    params
+}: {
+    params: Promise<{ slug: string }>
 }) {
     const { slug } = await params;
     const item = CATEGORIES.find((cat) => cat.href.includes(slug));
@@ -15,7 +15,7 @@ export default async function BanchDetailPage({
     return (
         <main className="min-h-screen bg-[#fafafa] pt-20 pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 {/* 🍞 BREADCRUMBS */}
                 <nav className="flex mb-8 text-sm font-medium text-gray-500" aria-label="Breadcrumb">
                     <ol className="flex items-center space-x-2">
@@ -32,16 +32,16 @@ export default async function BanchDetailPage({
                 </nav>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                    
+
                     {/* 🎥 LEFT: VIDEO PLAYER (Col 1-8) */}
                     <div className="lg:col-span-8">
                         <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black group">
-                            <video 
-                                src={item.video} 
-                                controls 
-                                autoPlay 
-                                muted 
-                                loop 
+                            <video
+                                src={item.video}
+                                controls
+                                autoPlay
+                                muted
+                                loop
                                 playsInline
                                 className="w-full h-full object-fit"
                             />
@@ -61,21 +61,22 @@ export default async function BanchDetailPage({
                             </div>
 
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                Experience unparalleled comfort with our signature {item.label} design. 
-                                Handcrafted with premium materials, this piece features ergonomic support 
+                                Experience unparalleled comfort with our signature {item.label} design.
+                                Handcrafted with premium materials, this piece features ergonomic support
                                 and a timeless aesthetic that elevates any living space.
                             </p>
 
                             <div className="space-y-4 pt-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full">
-                                        ✨
+                                {item.features.map((feat, index) => (
+                                    <div key={index} className="flex items-center gap-4">
+                                        <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">✨</div>
+                                        <div>
+                                            <h3 className="font-bold text-sm tex-gray-900">{feat.title}</h3>
+                                            <p className="text-sm text-gray-500">{feat.desc}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold text-gray-900">Modern Aesthetic</h3>
-                                        <p className="text-sm text-gray-500">Sleek lines and soft textures.</p>
-                                    </div>
-                                </div>
+                                ))}
+
                                 <div className="flex items-center gap-4">
                                     <div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full">
                                         🛡️
