@@ -2,31 +2,7 @@
 import { useState } from "react";
 import CategoryStrip from "../home-page/components/CategorySection";
 import LoadMoreButton from "@/components/LoadMoreButton";
-
-const CATEGORIES: any = [
-    { label: 'Banch 1', video: '/videos/banch/banch1.mp4', href: '/banch-1' },
-    { label: 'Banch 2', video: '/videos/banch/banch2.mp4', href: '/banch-2' },
-    { label: 'Banch 3', video: '/videos/banch/banch3.mp4', href: '/banch-3' },
-    { label: 'Banch 4', video: '/videos/banch/banch4.mp4', href: '/banch-4' },
-    { label: 'Banch 5', video: '/videos/banch/banch5.mp4', href: '/banch-5' },
-    { label: 'Banch 6', video: '/videos/banch/banch6.mp4', href: '/banch-6' },
-    { label: 'Banch 7', video: '/videos/banch/banch7.mp4', href: '/banch-7' },
-    { label: 'Banch 8', video: '/videos/banch/banch8.mp4', href: '/banch-8' },
-    { label: 'Banch 9', video: '/videos/banch/banch9.mp4', href: '/banch-9' },
-    { label: 'Banch 10', video: '/videos/banch/banch10.mp4', href: '/banch-10' },
-    { label: 'Banch 11', video: '/videos/banch/banch11.mp4', href: '/banch-11' },
-    { label: 'Banch 12', video: '/videos/banch/banch12.mp4', href: '/banch-12' },
-    { label: 'Banch 13', video: '/videos/banch/banch13.mp4', href: '/banch-13' },
-    { label: 'Banch 14', video: '/videos/banch/banch14.mp4', href: '/banch-14' },
-    { label: 'Banch 15', video: '/videos/banch/banch15.mp4', href: '/banch-15' },
-    { label: 'Banch 16', video: '/videos/banch/banch16.mp4', href: '/banch-16' },
-    { label: 'Banch 17', video: '/videos/banch/banch17.mp4', href: '/banch-17' },
-    { label: 'Banch 18', video: '/videos/banch/banch18.mp4', href: '/banch-18' },
-    { label: 'Banch 19', video: '/videos/banch/banch19.mp4', href: '/banch-19' },
-    { label: 'Banch 20', video: '/videos/banch/banch20.mp4', href: '/banch-20' },
-    { label: 'Banch 21', video: '/videos/banch/banch21.mp4', href: '/banch-21' },
-    { label: 'Banch 22', video: '/videos/banch/banch22.mp4', href: '/banch-22' },
-];
+import { CATEGORIES } from "./categories";
 
 export default function Banch() {
     const [visibleCount, setVisibleCount] = useState(4);
