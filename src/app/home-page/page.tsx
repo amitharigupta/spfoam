@@ -13,7 +13,7 @@ import HeroBanner from './components/HeroBanner';
 import CategoryStrip from './components/CategorySection';
 
 const CATEGORIES: any = [
-  { label: 'Sofas', image: '/images/categories/sofa.jpg', href: '/sofas' },
+  { label: 'Sofas', image: '/images/categories/sofa.jpg', href: '/sofa' },
   { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofas' },
   { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },

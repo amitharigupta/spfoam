@@ -7,7 +7,7 @@ import { ShoppingBagIcon, HeartIcon, MagnifyingGlassIcon, Bars3Icon, XMarkIcon, 
 
 const NAV_ITEMS = [
   {
-    label: 'Sofa', href: '/sofas',
+    label: 'Sofa', href: '/sofa',
     // submenu: [
     //   { label: 'Chairs', href: '/livingroom/chairs' },
     //   { label: 'Tables', href: '/livingroom/tables' },
