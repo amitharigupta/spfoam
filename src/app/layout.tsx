@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'SP Foam Centre',
-    title: 'SP Foam Centre — Aubrey Sofa',
+    title: 'SP Foam Centre',
     description: 'Mid-century modern sofa with 200+ fabric choices and lifetime warranty.',
     images: [{ url: '/assets/images/app_logo.png', width: 1200, height: 630 }],
   },

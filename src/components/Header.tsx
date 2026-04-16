@@ -17,7 +17,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Sectional Sofa',
-    href: '/sectional-sofas',
+    href: '/sectional-sofa',
   },
   {
     label: 'Bed Mattress', href: '/bed-mattress',

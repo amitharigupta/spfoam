@@ -14,7 +14,7 @@ import CategoryStrip from './components/CategorySection';
 
 const CATEGORIES: any = [
   { label: 'Sofas', image: '/images/categories/sofa.jpg', href: '/sofa' },
-  { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofas' },
+  { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofa' },
   { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
   { label: 'Bed Mattress', image: '/images/categories/bed-mattress.jpg', href: '/bed-mattress' },
