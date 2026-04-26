@@ -112,10 +112,10 @@ export default function Header() {
 
                   {/* ✅ Mega Menu */}
                   {item.submenu && activeMenu === item.label && (
-                    <div className="absolute left-0 top-full mt-4 w-[750px] bg-white shadow-xl rounded-xl p-6 flex gap-6 z-50">
+                    <div className="absolute left-0 top-full mt-4 w-[150px] bg-white shadow-xl rounded-xl p-6 flex gap-6 z-50">
 
                       {/* LEFT LINKS */}
-                      <div className="w-1/3 flex flex-col gap-3">
+                      <div className="w-full flex flex-col gap-3">
                         {item.submenu.map((sub) => (
                           <Link
                             key={sub.label}
@@ -131,16 +131,16 @@ export default function Header() {
                           </Link>
                         ))}
 
-                        <Link
+                        {/* <Link
                           href="/dining-room"
                           className="mt-4 bg-teal-700 text-white px-4 py-2 rounded text-sm text-center"
                         >
                           Shop All {item.label}
-                        </Link>
+                        </Link> */}
                       </div>
 
                       {/* RIGHT IMAGE */}
-                      <div className="w-2/3 relative h-[220px]">
+                      {/* <div className="w-2/3 relative h-[220px]">
                         {item?.image ? (
                           <Image
                             src={item.image}
@@ -153,7 +153,7 @@ export default function Header() {
                             No Image
                           </div>
                         )}
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>
