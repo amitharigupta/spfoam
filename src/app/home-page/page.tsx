@@ -14,10 +14,13 @@ import CategoryStrip from './components/CategorySection';
 
 const CATEGORIES: any = [
   { label: 'Sofas', image: '/images/categories/sofa.jpg', href: '/sofa' },
+  { label: 'Chaises Sofa (Dewan Sofa)', image: '/images/categories/dewan-sofa.jpg', href: '/dewan-sofa' },
   { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofa' },
   { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
-  { label: 'Bed Mattress', image: '/images/categories/bed-mattress.jpg', href: '/bed-mattress' },
+  { label: 'Beside Table', image: '/images/categories/beside-table.jpg', href: '/beside-table' },
+  { label: 'Center Table', image: '/images/categories/center-table.jpg', href: '/center-table' },
+  { label: 'Coffee Table', image: '/images/categories/coffee-table.jpg', href: '/coffee-table' },
   { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/barstool' },
   { label: 'Puffy', image: '/images/categories/puffy.jpg', href: '/puffy' },
   { label: 'Sofa Raw Material', image: '/images/categories/raw-material.jpg', href: '/raw-material' },

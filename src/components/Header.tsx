@@ -20,7 +20,18 @@ const NAV_ITEMS = [
     href: '/sectional-sofa',
   },
   {
-    label: 'Bed Mattress', href: '/bed-mattress',
+    label: 'Table', href: '/table',
+    submenu: [
+      {
+        label: 'Beside Table', href: '/beside-table',
+      },
+      {
+        label: 'Centre Table', href: '/centre-table',
+      },
+      {
+        label: 'Coffee Table', href: '/coffee-table',
+      }
+    ]
   },
   {
     label: 'Arm Chairs', href: '/arm-chairs',
