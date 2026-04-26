@@ -123,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
-          <span>© {new Date().getFullYear()} SP Foam Centre, a La-Z-Boy Incorporated Company. All Rights Reserved.</span>
+          <span>© {new Date().getFullYear()} SP Foam Centre All Rights Reserved.</span>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
             <Link href="/Terms-of-service" className="hover:text-white/60 transition-colors">Terms of Service</Link>

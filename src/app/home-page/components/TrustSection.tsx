@@ -33,9 +33,9 @@ const TRUST_ITEMS = [
         <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
       </svg>
     ),
-    title: '365-Day Returns',
-    desc: 'Not in love? Return within a year for a full refund. We\'ll arrange pickup — no questions asked.',
-    detail: 'Free return pickup. Refund processed within 5–7 business days.',
+    title: 'Easy Returns (Limited Period)',
+    desc: 'Hassle-free product replacement or return',
+    detail: 'Enjoy free return pickup. Refunds are processed within 5–7 business days.'
   },
   {
     icon: (
@@ -52,25 +52,45 @@ const TRUST_ITEMS = [
 
 const FAQS = [
   {
-    q: 'How long does it take to receive my sofa?',
-    a: 'All SP Foam Centre pieces are made to order. The Aubrey Sofa ships in 1–2 weeks from order placement. You\'ll receive weekly email updates and a delivery window confirmation 1 day before arrival.',
+    q: 'What products does SP Foam Centre offer?',
+    a: 'We offer a wide range of furniture including sofas, benches, barstools, puffies (ottomans), centre tables, coffee tables, and bedside tables designed for both comfort and style.',
   },
   {
-    q: 'Can I really customize the fabric and size?',
-    a: 'Absolutely. Choose from 200+ fabric options across velvets, performance fabrics, and sustainable textiles. The Aubrey is available in 3 sizes (72", 84", 96") and 4 leg finishes. Every configuration is built to order.',
+    q: 'Do you provide customization options?',
+    a: 'Yes, we specialize in customized furniture. You can choose your preferred size, design, fabric, foam quality, and color to match your home or office interiors.',
   },
   {
-    q: 'What if my sofa doesn\'t fit through the door?',
-    a: 'Our delivery team is experienced with challenging spaces. The Aubrey\'s legs are removable, reducing the profile by 6". If you\'re concerned, our Free Design Services team can advise on fit before you order.',
+    q: 'What types of materials are used in your furniture?',
+    a: 'We use high-quality materials such as premium foam, durable wood, engineered boards, metal frames, and long-lasting upholstery fabrics to ensure comfort and durability.',
   },
   {
-    q: 'How do I care for the upholstery?',
-    a: 'Most SP Foam Centre fabrics are spot-clean with mild soap and water. Performance and pet-friendly fabrics are machine-washable. Each order includes a care card specific to your selected fabric.',
+    q: 'How do I choose the right sofa or furniture for my space?',
+    a: 'Our team can guide you based on your room size, usage, design preference, and budget. We recommend measuring your space and sharing requirements before placing an order.',
   },
-  // {
-  //   q: 'Do you offer free design consultations?',
-  //   a: 'Yes! Our Free Design Services team offers complimentary consultations via video call, chat, or in our showrooms. They can help with fabric selection, room layout, and styling. Book online or call us anytime.',
-  // },
+  {
+    q: 'Do you offer delivery services?',
+    a: 'Yes, we provide delivery services. Delivery timelines may vary depending on your location and whether the product is customized or ready-made.',
+  },
+  {
+    q: 'What is the average delivery time?',
+    a: 'For ready-made products, delivery usually takes a few days. Customized orders may take 7–15 days depending on the design and complexity.'
+  },
+  {
+    q: 'Do your products come with a warranty?',
+    a: 'Yes, most of our products come with a limited warranty covering manufacturing defects. Warranty terms may vary depending on the product type.'
+  },
+  {
+    q: 'How should I maintain and clean my furniture?',
+    a: 'Regular dusting and occasional cleaning with a soft cloth are recommended. For upholstered items, avoid harsh chemicals and use fabric-safe cleaning solutions.'
+  },
+  {
+    q: 'Can I visit your store to see the products?',
+    a: 'Yes, you can visit our store to explore our collection, check material quality, and discuss customization options with our team.'
+  },
+  {
+    q: 'Do you offer bulk or commercial orders?',
+    a: 'Yes, we cater to bulk orders for offices, cafes, restaurants, and other commercial spaces with special pricing and customization options.'
+  }
 ];
 
 export default function TrustSection() {
@@ -154,15 +174,13 @@ export default function TrustSection() {
                 >
                   <span className="text-sm font-semibold text-[var(--text-primary)] pr-4">{faq?.q}</span>
                   <ChevronDownIcon
-                    className={`w-5 h-5 text-[var(--text-muted)] flex-shrink-0 transition-transform duration-400 ${
-                      openFaq === i ? 'rotate-180' : ''
-                    }`}
+                    className={`w-5 h-5 text-[var(--text-muted)] flex-shrink-0 transition-transform duration-400 ${openFaq === i ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${
-                    openFaq === i ? 'max-h-[300px]' : 'max-h-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-500 ${openFaq === i ? 'max-h-[300px]' : 'max-h-0'
+                    }`}
                 >
                   <div className="p-5 pt-0 border-t border-[var(--border-light)]">
                     <p className="pt-4 text-sm text-[var(--text-secondary)] leading-relaxed">{faq?.a}</p>

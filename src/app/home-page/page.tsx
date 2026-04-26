@@ -104,7 +104,7 @@ export default function HomePage() {
         </div>
 
         {/* Customization panel */}
-        <CustomizationPanel />
+        {/* <CustomizationPanel /> */}
 
         {/* Product details accordion */}
         <ProductDetailsSection />

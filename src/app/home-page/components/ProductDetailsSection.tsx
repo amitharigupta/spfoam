@@ -41,7 +41,7 @@ const FEATURES = [
         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
       </svg>,
 
-  label: '365-Day Returns',
+  label: 'Limited Period Return',
   sub: 'Love it or return it'
 }];
 
@@ -134,7 +134,7 @@ export default function ProductDetailsSection() {
   return (
     <section className="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-20" id="details" aria-label="Product details">
       {/* Feature icons */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14 p-6 bg-[var(--bg-warm)] rounded-3xl">
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14 p-6 bg-[var(--bg-warm)] rounded-3xl">
         {FEATURES?.map((f) =>
         <div key={f?.label} className="flex flex-col items-center text-center gap-2 p-3">
             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-soft mb-1">
@@ -144,7 +144,7 @@ export default function ProductDetailsSection() {
             <p className="text-xs text-[var(--text-muted)]">{f?.sub}</p>
           </div>
         )}
-      </div>
+      </div> */}
       {/* Description + accordion */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20">
         {/* Description */}
