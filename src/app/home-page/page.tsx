@@ -19,7 +19,7 @@ const CATEGORIES: any = [
   { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
   { label: 'Beside Table', image: '/images/categories/beside-table.jpg', href: '/beside-table' },
-  { label: 'Center Table', image: '/images/categories/center-table.jpg', href: '/center-table' },
+  { label: 'Console Table', image: '/images/categories/center-table.jpg', href: '/console-table' },
   { label: 'Coffee Table', image: '/images/categories/coffee-table.jpg', href: '/coffee-table' },
   { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/barstool' },
   { label: 'Puffy', image: '/images/categories/puffy.jpg', href: '/puffy' },
