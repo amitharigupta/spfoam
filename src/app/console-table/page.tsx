@@ -4,7 +4,7 @@ import CategoryStrip from "../home-page/components/CategorySection";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { CATEGORIES } from './categories';
 
-export default function Sofa() {
+export default function ConsoleTable() {
     const [visibleCount, setVisibleCount] = useState(4);
 
     const handleLoadMore = () => {

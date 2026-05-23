@@ -1,8 +1,8 @@
 export const CATEGORIES: any = [
     {
-        label: 'Coffee Table 1',
-        video: '/videos/coffee-table/1.mp4',
-        href: '/coffee-table/coffee-table-1',
+        label: 'Console Table 1',
+        video: '/videos/console-table/1.mp4',
+        href: '/console-table/console-table-1',
         price: '₹12,499',
         originalPrice: '₹18,999',
         description: 'A sleek, pill-shaped silhouette designed for modern minimalists. Its seamless oval edges make it a perfect fit for high-traffic entryways where sharp corners are a concern.',
@@ -13,9 +13,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 2',
-        video: '/videos/coffee-table/2.mp4',
-        href: '/coffee-table/coffee-table-2',
+        label: 'Console Table 2',
+        video: '/videos/console-table/2.mp4',
+        href: '/console-table/console-table-2',
         price: '₹15,999',
         originalPrice: '₹24,500',
         description: 'The Parisian Arc features a graceful curved design and gold-tipped stiletto legs, bringing a touch of boutique luxury to your bedroom or lounge.',
@@ -26,9 +26,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 3',
-        video: '/videos/coffee-table/3.mp4',
-        href: '/coffee-table/coffee-table-3',
+        label: 'Console Table 3',
+        video: '/videos/console-table/3.mp4',
+        href: '/console-table/console-table-3',
         price: '₹13,200',
         originalPrice: '₹19,000',
         description: 'A grounded, architectural block design. This solid-base bench provides a stable and sturdy seating option that doubles as a modern coffee table.',
@@ -39,9 +39,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 4',
-        video: '/videos/coffee-table/4.mp4',
-        href: '/coffee-table/coffee-table-4',
+        label: 'Console Table 4',
+        video: '/videos/console-table/4.mp4',
+        href: '/console-table/console-table-4',
         price: '₹18,500',
         originalPrice: '₹28,000',
         description: 'Where industrial strength meets high-fashion. The X-Frame Luxe features a striking metallic cross-base paired with intricately textured designer fabric.',
@@ -52,9 +52,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 5',
-        video: '/videos/coffee-table/5.mp4',
-        href: '/coffee-table/coffee-table-5',
+        label: 'Console Table 5',
+        video: '/videos/console-table/5.mp4',
+        href: '/console-table/console-table-5',
         price: '₹14,999',
         originalPrice: '₹22,999',
         description: 'A timeless classic. The Royal Tufted bench features deep-button Chesterfield upholstery, adding instant sophistication to any formal sitting area.',
@@ -65,12 +65,12 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 6',
-        video: '/videos/coffee-table/6.mp4',
-        href: '/coffee-table/coffee-table-6',
+        label: 'Console Table 6',
+        video: '/videos/console-table/6.mp4',
+        href: '/console-table/console-table-6',
         price: '₹16,700',
         originalPrice: '₹25,000',
-        description: 'Featuring a tiered bolster design, Coffee Table 6 is an architectural piece that uses "puffy" layers to create a soft yet structured modernist aesthetic.',
+        description: 'Featuring a tiered bolster design, Console Table 6 is an architectural piece that uses "puffy" layers to create a soft yet structured modernist aesthetic.',
         features: [
             { title: 'Tiered Layering', desc: 'Unique bolster-style seat for targeted support.' },
             { title: 'Plush Finish', desc: 'Ultra-soft velvet texture that feels like a cloud.' },
@@ -78,9 +78,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 7',
-        video: '/videos/coffee-table/7.mp4',
-        href: '/coffee-table/coffee-table-7',
+        label: 'Console Table 7',
+        video: '/videos/console-table/7.mp4',
+        href: '/console-table/console-table-7',
         price: '₹11,500',
         originalPrice: '₹17,000',
         description: 'An elegant, slimline profile designed specifically for narrow hallways. Its tapered legs and light footprint make it unobtrusive yet functional.',
@@ -91,9 +91,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 8',
-        video: '/videos/coffee-table/8.mp4',
-        href: '/coffee-table/coffee-table-8',
+        label: 'Console Table 8',
+        video: '/videos/console-table/8.mp4',
+        href: '/console-table/console-table-8',
         price: '₹17,800',
         originalPrice: '₹26,500',
         description: 'Defined by its glamorous gold-finish metallic rim, this bench brings a "Hollywood Regency" feel to your vanity or dressing area.',
@@ -104,12 +104,12 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 9',
-        video: '/videos/coffee-table/9.mp4',
-        href: '/coffee-table/coffee-table-9',
+        label: 'Console Table 9',
+        video: '/videos/console-table/9.mp4',
+        href: '/console-table/console-table-9',
         price: '₹19,200',
         originalPrice: '₹30,000',
-        description: 'More than a bench—it’s a daybed. With an integrated side armrest, Coffee Table 9 is designed for those who want a cozy nook to lean back and relax.',
+        description: 'More than a bench—it’s a daybed. With an integrated side armrest, Console Table 9 is designed for those who want a cozy nook to lean back and relax.',
         features: [
             { title: 'Integrated Armrest', desc: 'Built-in bolster for side-leaning comfort.' },
             { title: 'Reading Ready', desc: 'Ideal for placement under windows or in nooks.' },
@@ -117,9 +117,9 @@ export const CATEGORIES: any = [
         ]
     },
     {
-        label: 'Coffee Table 10',
-        video: '/videos/coffee-table/10.mp4',
-        href: '/coffee-table/coffee-table-10',
+        label: 'Console Table 10',
+        video: '/videos/console-table/10.mp4',
+        href: '/console-table/console-table-10',
         price: '₹15,500',
         originalPrice: '₹23,000',
         description: 'The Industrial Grid features a geometric metal frame that perfectly complements loft-style living and rugged, modern interiors.',
@@ -129,16 +129,14 @@ export const CATEGORIES: any = [
             { title: 'Matt Finish', desc: 'Powder-coated frame that resists rust and scratches.' }
         ]
     },
-    { label: 'Coffee Table 11', video: '/videos/coffee-table/11.mp4', href: '/coffee-table/coffee-table-11' },
-    { label: 'Coffee Table 12', video: '/videos/coffee-table/12.mp4', href: '/coffee-table/coffee-table-12' },
-    { label: 'Coffee Table 13', video: '/videos/coffee-table/13.mp4', href: '/coffee-table/coffee-table-13' },
-    { label: 'Coffee Table 14', video: '/videos/coffee-table/14.mp4', href: '/coffee-table/coffee-table-14' },
-    { label: 'Coffee Table 15', video: '/videos/coffee-table/15.mp4', href: '/coffee-table/coffee-table-15' },
-    { label: 'Coffee Table 16', video: '/videos/coffee-table/16.mp4', href: '/coffee-table/coffee-table-16' },
-    { label: 'Coffee Table 17', video: '/videos/coffee-table/17.mp4', href: '/coffee-table/coffee-table-17' },
-    { label: 'Coffee Table 18', video: '/videos/coffee-table/18.mp4', href: '/coffee-table/coffee-table-18' },
-    { label: 'Coffee Table 19', video: '/videos/coffee-table/19.mp4', href: '/coffee-table/coffee-table-19' },
-    { label: 'Coffee Table 20', video: '/videos/coffee-table/20.mp4', href: '/coffee-table/coffee-table-20' },
-    { label: 'Coffee Table 21', video: '/videos/coffee-table/21.mp4', href: '/coffee-table/coffee-table-21' },
-    { label: 'Coffee Table 22', video: '/videos/coffee-table/22.mp4', href: '/coffee-table/coffee-table-22' },
+    { label: 'Console Table 11', video: '/videos/console-table/11.mp4', href: '/console-table/console-table-11' },
+    { label: 'Console Table 12', video: '/videos/console-table/12.mp4', href: '/console-table/console-table-12' },
+    { label: 'Console Table 13', video: '/videos/console-table/13.mp4', href: '/console-table/console-table-13' },
+    { label: 'Console Table 14', video: '/videos/console-table/14.mp4', href: '/console-table/console-table-14' },
+    { label: 'Console Table 15', video: '/videos/console-table/15.mp4', href: '/console-table/console-table-15' },
+    { label: 'Console Table 16', video: '/videos/console-table/16.mp4', href: '/console-table/console-table-16' },
+    { label: 'Console Table 17', video: '/videos/console-table/17.mp4', href: '/console-table/console-table-17' },
+    { label: 'Console Table 18', video: '/videos/console-table/18.mp4', href: '/console-table/console-table-18' },
+    { label: 'Console Table 19', video: '/videos/console-table/19.mp4', href: '/console-table/console-table-19' },
+    { label: 'Console Table 20', video: '/videos/console-table/20.mp4', href: '/console-table/console-table-20' },
 ];
