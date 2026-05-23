@@ -4,7 +4,7 @@ import CategoryStrip from "../home-page/components/CategorySection";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { CATEGORIES } from './categories';
 
-export default function BesideTable() {
+export default function BedsideTable() {
     const [visibleCount, setVisibleCount] = useState(4);
 
     const handleLoadMore = () => {

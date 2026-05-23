@@ -18,7 +18,7 @@ const CATEGORIES: any = [
   { label: 'Sectionals Sofas', image: '/images/categories/sectional-sofas.jpg', href: '/sectional-sofa' },
   { label: 'Arm Chairs', image: '/images/categories/chair.jpg', href: '/arm-chairs' },
   { label: 'Banch', image: '/images/categories/banch.jpg', href: '/banch' },
-  { label: 'Beside Table', image: '/images/categories/beside-table.jpg', href: '/beside-table' },
+  { label: 'Bedside Table', image: '/images/categories/bedside-table.jpg', href: '/bedside-table' },
   { label: 'Console Table', image: '/images/categories/center-table.jpg', href: '/console-table' },
   { label: 'Coffee Table', image: '/images/categories/coffee-table.jpg', href: '/coffee-table' },
   { label: 'Bar Stool', image: '/images/categories/barstool.jpg', href: '/barstool' },

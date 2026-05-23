@@ -23,7 +23,7 @@ const NAV_ITEMS = [
     label: 'Table', href: '/table',
     submenu: [
       {
-        label: 'Beside Table', href: '/beside-table',
+        label: 'Bedside Table', href: '/bedside-table',
       },
       {
         label: 'Centre Table', href: '/centre-table',

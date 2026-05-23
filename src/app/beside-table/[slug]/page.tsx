@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { CATEGORIES } from '../categories';
 import Link from 'next/link';
 
-export default async function BesideTablePage({
+export default async function BedsideTablePage({
     params
 }: {
     params: Promise<{ slug: string }>
@@ -22,7 +22,7 @@ export default async function BesideTablePage({
                         <li><Link href="/" className="hover:text-black transition">Home</Link></li>
                         <li className="flex items-center space-x-2">
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" /></svg>
-                            <Link href="/beside-table" className="hover:text-black transition">Beside Table</Link>
+                            <Link href="/bedside-table" className="hover:text-black transition">Bedside Table</Link>
                         </li>
                         <li className="flex items-center space-x-2 text-black font-semibold">
                             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" /></svg>
