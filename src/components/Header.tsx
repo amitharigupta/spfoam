@@ -20,6 +20,10 @@ const NAV_ITEMS = [
     href: '/sectional-sofa',
   },
   {
+    label: 'Bed Design',
+    href: '/bed-design',
+  },
+  {
     label: 'Table', href: '/table',
     submenu: [
       {
